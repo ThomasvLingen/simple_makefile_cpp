@@ -8,7 +8,8 @@ LD = $(CC)
 COMPILER_FLAGS = -Wall -std=c++11
 
 # Linker flags
-LINKER_FLAGS = 
+LIBS =
+LINKER_FLAGS =
 
 # Files to compile
 SRC_PATH = src/
@@ -30,7 +31,7 @@ $(EXEC) : $(OBJ_FILES)
 	@echo
 	mkdir -p $(BUILD_PATH)
 	@echo LD $@
-	$(SILENT) $(LD) $(COMPILER_FLAGS) $(OBJ_FILES) $(LINKER_FLAGS) -o $(EXEC)
+	$(SILENT) $(LD) $(COMPILER_FLAGS) $(OBJ_FILES) $(LINKER_FLAGS) $(LIBS) -o $(EXEC)
 	@echo
 	@echo "Moving resources to build"
 	cp -r $(RES_PATH) $(BUILD_PATH)

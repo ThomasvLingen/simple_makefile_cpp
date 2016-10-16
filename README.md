@@ -13,6 +13,9 @@ Your linker (For g++, this is the same as your compiler)
 ### COMPILER_FLAGS
 Flags which your compiler will use
 
+### LIBS
+Libraries to link your program with (for example -lSDL2 for SDL2)
+
 ### LINKER_FLAGS
 Flags which your linker will use
 
