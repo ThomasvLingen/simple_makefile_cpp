@@ -14,7 +14,7 @@ LINKER_FLAGS =
 
 # Files to compile
 SRC_PATH = src/
-SRC_FILES = $(wildcard $(SRC_PATH)*.cpp)
+SRC_FILES = $(shell find $(SRC_PATH) -name '*.cpp')
 OBJ_FILES = $(SRC_FILES:.cpp=.o)
 
 # Path for the resulting file
@@ -46,6 +46,6 @@ run : $(EXEC)
 .PHONY: clean
 clean:
 	@echo "Cleaning build"
-	rm -rf $(SRC_PATH)*.o
+	rm -rf $(shell find $(SRC_PATH) -name '*.o')
 	rm -rf $(BUILD_PATH)*
 
