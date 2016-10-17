@@ -10,6 +10,9 @@ Your compiler
 ### LD
 Your linker (For g++, this is the same as your compiler)
 
+### INCLUDE_PATHS
+Additional include paths for your project
+
 ### COMPILER_FLAGS
 Flags which your compiler will use
 

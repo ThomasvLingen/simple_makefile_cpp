@@ -5,7 +5,8 @@ CC = g++
 LD = $(CC)
 
 # Compiler flags
-COMPILER_FLAGS = -Wall -std=c++11
+INCLUDE_PATHS = -Isrc/
+COMPILER_FLAGS = -Wall -std=c++11 $(INCLUDE_PATHS)
 
 # Linker flags
 LIBS =
